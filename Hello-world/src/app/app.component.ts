@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet , FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -12,6 +13,7 @@ export class AppComponent {
   title = 'Hello-world';
   imgUrl="../assets/BL_logo_square_jpg.jpg";
   url : string="https://www.bridgelabz.com";
+  userName: string ="";
 
   ngOnInit(): void{
     this.title="Hello from BridgeLabz.";
